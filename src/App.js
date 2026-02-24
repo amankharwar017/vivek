@@ -20,8 +20,18 @@ function App() {
     });
   };
 
+  // ✅ YES BUTTON CLICK
   const handleYesClick = () => {
-    setMessage("This is the happiest moment ever 💖 Thank you for choosing me ❤️✨");
+    // Open WhatsApp chat directly
+    window.open(
+      "https://wa.me/919871769282?text=Hi%20Vivek%20❤️%20I%20clicked%20Yes%20💖",
+      "_blank"
+    );
+
+    // Show message on screen
+    setMessage(
+      "This is the happiest moment ever 💖 Thank you for choosing me ❤️✨"
+    );
   };
 
   const handleReset = () => {
@@ -37,7 +47,7 @@ function App() {
 
       <div className="buttons">
         <button className="yes-btn" onClick={handleYesClick}>
-         ❤️ Send your response to vivek  ❤️.
+          ❤️ Send your response to Vivek ❤️
         </button>
 
         <button
@@ -45,6 +55,7 @@ function App() {
           style={{
             top: position.top,
             left: position.left,
+            position: "absolute",
           }}
           onMouseEnter={moveButton}
           onClick={moveButton}
@@ -56,7 +67,7 @@ function App() {
       {/* Reset Button Appears Only After Yes Click */}
       {message && (
         <button className="reset-btn" onClick={handleReset}>
-         Call me baby i am waiting (9871769282) ❤️❤️❤️❤️❤️.......
+          Call me baby I am waiting (9871769282) ❤️❤️❤️❤️❤️
         </button>
       )}
     </div>
